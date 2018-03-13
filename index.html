@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>老伙计</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Resource-type" content="Document" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="revised" content="v1.0 2018/02/13">
+    <script type="application/javascript" src="zepto.min.js"></script>
+    <script type="application/javascript" src="async.js"></script>
+    <script type="application/javascript" src="template.js"></script>
+    <script type="application/javascript" src="index.js"></script>
+</head>
+<body>
+    <script type="text/html" id="rem-template">
+        <h2>老师</h2>
+        <div class="teacher-box">
+            {{each totalData.teacherInfo as teacher}}
+                <div>{{teacher.name}}</div>
+            {{/each}}
+        </div>
+        <br/>
+        <h2>同学</h2>
+        <div class="student-box">
+            {{each totalData.studentInfo as student}}
+                <div>{{student.name}}</div>
+            {{/each}}
+        </div>
+        <br/>
+        <h2>课程</h2>
+        <div class="course-box">
+            {{each totalData.courseInfo as course}}
+                <div>{{course.name}}</div>
+            {{/each}}
+        </div>
+    </script>
+    <div id="main-container"></div>
+</body>
+</html>
